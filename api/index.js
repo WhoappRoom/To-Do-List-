@@ -1,4 +1,4 @@
-const nova = require('node_modules/novaxjs2/index.js');
+const nova = require('novaxjs2');
 const path = require('path');
 const fs = require('fs');
 const app = nova();
