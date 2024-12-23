@@ -74,6 +74,7 @@ app.error((err, req, res, next) => {
     return `<h1>Error: ${err.message}</h1>`;
 });
 ```
+### Example
 ```javascript
 const nova = require('novaxjs2');
 const path = require('path');
