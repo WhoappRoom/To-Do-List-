@@ -17,8 +17,8 @@ app.get('/', (req, res) => {
   return indexHtml;
 });
 
-app.get('/view', async (req, res) => {
-  return await view;
+app.get('/view', (req, res) => {
+  return view;
 });
 app.get('/add', (req, res) => {
   return add;
