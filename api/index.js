@@ -13,15 +13,15 @@ const add = fs.readFileSync(path.join(__dirname, '../public/add.html'));
 app.style = css;
 
 // Handle GET request to show the to-do list page
-app.get('/', async(req, res) => {
-  return await indexHtml;
+app.get('/', (req, res) => {
+  return indexHtml;
 });
 
 app.get('/view', async (req, res) => {
   return await view;
 });
-app.get('/add', async (req, res) => {
-  return await add;
+app.get('/add', (req, res) => {
+  return add;
 });
 
 // Start the server
