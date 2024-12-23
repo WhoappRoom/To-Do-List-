@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Todo</title>
+</head>
+<body>
+  <header>
+    <h1>Add a new Todo</h1>
+  </header>
+  <div class="container">
+    <form id="todoForm">
+      <input type="text" id="todoInput" placeholder="Enter a new todo" required>
+      <input type="submit" value="Add Todo">
+    </form>
+
+    <!-- Navigation to Home Page -->
+    <br>
+    <a href="/">Back to Todo List</a>
+  </div>
+
+  <script>
+    // Function to get todos from localStorage
+    function getTodos() {
+      return JSON.parse(localStorage.getItem('todos')) || [];
+    }
+
+    // Function to set todos in localStorage
+    function setTodos(todos) {
+      localStorage.setItem('todos', JSON.stringify(todos));
+    }
+
+    // Add a new todo
+    document.getElementById('todoForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const todoInput = document.getElementById('todoInput');
+      const newTodo = todoInput.value.trim();
+      if (newTodo) {
+        const todos = getTodos();
+        todos.push(newTodo);
+        setTodos(todos);  // Update localStorage
+        todoInput.value = '';  // Clear input field
+        alert("Todo added successfully!");  // Notify the user
+      }
+    });
+  </script>
+</body>
+</html>
