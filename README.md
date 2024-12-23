@@ -16,7 +16,6 @@ Nova is a lightweight and flexible web framework for Node.js. It simplifies the 
 
 To use Nova in your project:
    ```bash
-   ```bash
    npm install novaxjs2
    ```
 
