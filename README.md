@@ -1,5 +1,5 @@
 
-# Nova Framework
+# Novaxjs2 Framework
 
 Nova is a lightweight and flexible web framework for Node.js. It simplifies the process of creating HTTP servers, handling routes, middleware, static files, and more.
 
@@ -15,20 +15,14 @@ Nova is a lightweight and flexible web framework for Node.js. It simplifies the 
 ## Installation
 
 To use Nova in your project:
-
-1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nova-framework.git
+   ```bash
+   npm install novaxjs2
    ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Import Nova in your application:
+ Import Nova in your application:
    ```javascript
-   const Nova = require('./nova.js');
+   const Nova = require('novaxjs2');
    ```
 
 ## Usage
@@ -36,13 +30,13 @@ To use Nova in your project:
 ### Creating the Server
 
 ```javascript
-const Nova = require('./nova.js');
+const Nova = require('novaxjs2');
 
 const app = new Nova();
 
 // Define routes
 app.get('/', (req, res) => {
-    res.end('<h1>Welcome to Nova Framework!</h1>');
+    return '<h1>Welcome to Nova Framework!</h1>';
 });
 
 // Start the server
@@ -77,7 +71,7 @@ Define a custom error handler:
 ```javascript
 app.error((err, req, res, next) => {
     res.writeHead(500, { "Content-Type": "text/html" });
-    res.end(`<h1>Error: ${err.message}</h1>`);
+    return `<h1>Error: ${err.message}</h1>`;
 });
 ```
 ```javascript
